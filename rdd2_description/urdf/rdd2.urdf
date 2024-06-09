@@ -11,7 +11,7 @@
  
   <link name="base_link">
     <visual>
-      <origin xyz="0 .025 0" rpy="0 0 3.141592654"/>
+      <origin xyz="0 0 0.02" rpy="0 0 3.141592654"/>
       <geometry>
         <mesh filename="package://rdd2_description/meshes/RDD2Frame.dae" scale="1 1 1" />
       </geometry>
@@ -65,17 +65,17 @@
   <joint name="base_joint" type="fixed">
     <parent link="base_link"/>
     <child link="base_footprint"/>
-    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 -0.23" rpy="0 0 0"/>
   </joint>
 
   <joint name="lidar_joint" type="fixed">
-    <origin xyz="0 0 0.191" rpy="0 0 0"/>
+    <origin xyz="0 0 0.08" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="lidar_link"/>
   </joint>
 
   <joint name="camera_joint" type="fixed">
-    <origin xyz=".173 0 .145" rpy="0 0 0"/>
+    <origin xyz=".13 0 -0.05" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="camera_link"/>
   </joint>
